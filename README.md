@@ -7,19 +7,20 @@
 《绝区零》「迷宫诡域：贝果计划」搜打撤玩法拆解。
 
 - `drafts/贝果计划_排版定稿.md`：已整理的 Hexo/Markdown 原文。
-- `index.html` 与 `assets/`：完整静态网页及配套图片，需要从本地交付包复制到仓库根目录。
+- `index.html` 与 `assets/`：静态网页及配套图片。
+- `.nojekyll`：让 GitHub Pages 直接发布这些静态文件。
 
-## 本地发布方式
+## 本地验收
 
-1. 使用 GitHub Desktop 克隆本仓库。
-2. 从博客交付包的 `贝果计划_网页版/` 文件夹复制 `index.html` 和 `assets/` 到仓库根目录。
-3. 检查目录为 `index.html`、`assets/`、`drafts/`、`README.md`。
-4. 在 GitHub Desktop 中提交并 Push。
-5. 在仓库 **Settings → Pages → Build and deployment** 中设置 **Deploy from a branch → main / (root)**，然后保存。
+在仓库根目录运行 `python -m http.server 8000`，打开 <http://localhost:8000/>。检查文章目录与顶部导航能跳到对应章节，所有插图正常显示，点击图片能打开原图；再用窄屏或手机检查目录与正文。
+
+## GitHub Pages 发布
+
+推送 `main` 后，在仓库 **Settings → Pages → Build and deployment** 中选择 **Deploy from a branch → main → /(root)** 并保存。静态网页位于根目录，无需构建流程。发布状态可在仓库 **Actions** 的 Pages 部署记录中查看。
 
 站点发布地址预计为：<https://nightstreetccia-creator.github.io/game-design-blog/>。
 
-> 当前只初始化了仓库和文章文本，静态网页图片尚未提交，GitHub Pages 尚未启用；不要将仓库页面与已发布网站混淆。
+> 仓库文件就绪与网站已经上线是两件事；以上链接须在 Pages 部署成功后验收。
 
 ## 编辑说明
 
